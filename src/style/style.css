@@ -1,0 +1,218 @@
+body {
+  background-color: #ee5353;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::-moz-selection {
+  background-color: #ee5353;
+}
+
+::selection {
+  background-color: #ee5353;
+}
+
+::-webkit-scrollbar {
+  width: 40px;
+  background-color: red;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 40px;
+  background-color: red;
+}
+
+::-webkit-scrollbar-track {
+  width: 40px;
+  background-color: red;
+}
+
+@-webkit-keyframes timer-icon-wiggle {
+  50% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  to {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+}
+
+@keyframes timer-icon-wiggle {
+  50% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  to {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+}
+
+.panel {
+  max-width: 700px;
+  height: 400px;
+  margin: 10px auto;
+  background: radial-gradient(#f19292 75%, #ee5353);
+  padding: 40px;
+  border-bottom-left-radius: 30%;
+  border-top-right-radius: 30%;
+  -webkit-box-shadow: 10px 10px 10px #1312121f;
+          box-shadow: 10px 10px 10px #1312121f;
+  border: 10px solid #ee5353;
+}
+
+.panel .header .main-title {
+  font-family: Rubik, arial;
+  color: #fff;
+  font-size: 3.9rem;
+  letter-spacing: -10px;
+  position: relative;
+  text-shadow: 1px 1px 10px #b6b6b6;
+}
+
+.panel .header .main-title .timer-icon {
+  -webkit-animation: timer-icon-wiggle 10s linear alternate infinite;
+          animation: timer-icon-wiggle 10s linear alternate infinite;
+}
+
+.panel .header .btn {
+  padding: 10px;
+  background: linear-gradient(-20deg, #4fcc4f, #008000);
+  color: #fff;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  font-size: 0.8em;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border: 2px solid #008000;
+  cursor: pointer;
+  outline: none;
+}
+
+.panel .header .btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  text-shadow: 0 0 1px;
+}
+
+.panel .timer-panel {
+  margin-top: 10px;
+}
+
+.panel .timer-panel .timer {
+  font-family: Rubik, arial;
+  color: #fff;
+  font-size: 3.9rem;
+  letter-spacing: -10px;
+  position: relative;
+  text-shadow: 1px 1px 10px #b6b6b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: inset 10px 10px 10px #ffffff44, 10px 10px 10px #eb0a0a44;
+          box-shadow: inset 10px 10px 10px #ffffff44, 10px 10px 10px #eb0a0a44;
+  border-radius: 50%;
+  width: 200px;
+  height: 140px;
+  margin: auto;
+  background-color: #ee5353;
+}
+
+.panel .timer-panel .timer:hover {
+  -webkit-box-shadow: 10px 10px 10px #eb0a0a44, inset 10px 10px 10px #ffffff44;
+          box-shadow: 10px 10px 10px #eb0a0a44, inset 10px 10px 10px #ffffff44;
+}
+
+.panel .timer-panel .timer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 55px;
+  height: 10px;
+  background: #008000;
+  margin-bottom: 130px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: 20px -10px 1px #008000;
+          box-shadow: 20px -10px 1px #008000;
+  -webkit-transform: skew(-50deg);
+          transform: skew(-50deg);
+}
+
+.footer {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  position: relative;
+  bottom: 185px;
+  left: 655px;
+  font-family: Montserrat, sans-serif;
+  color: #fdf4f4;
+  font-size: 1rem;
+  opacity: 0.5;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+
+.article {
+  width: 450px;
+  text-align: justify;
+  margin: 50px auto;
+}
+
+.article h2 {
+  margin-bottom: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.article p {
+  font-family: Montserrat, sans-serif;
+  color: #fdf4f4;
+  font-size: 1rem;
+  opacity: 0.5;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 650px) {
+  .panel {
+    margin: 100px auto;
+    height: 500px;
+  }
+  .panel .header .main-title {
+    font-size: 7em;
+  }
+  .panel .header .btn {
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+  }
+  .panel .timer-panel .timer {
+    font-size: 6em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .panel .header .main-title {
+    font-size: 7em;
+  }
+  .panel .timer-panel .timer {
+    font-size: 6em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

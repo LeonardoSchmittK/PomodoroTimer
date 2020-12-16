@@ -1,0 +1,47 @@
+.panel {
+  max-width: 700px;
+  height: 400px;
+  margin: 10px auto;
+  @include mainLayout();
+
+  .header {
+    .main-title {
+      @include textType(0);
+      .timer-icon {
+        animation: timer-icon-wiggle 10s linear alternate infinite;
+      }
+    }
+    .btn {
+      @include btn();
+    }
+  }
+  .timer-panel {
+    margin-top: 10px;
+    .timer {
+      @include textType(0);
+      @include flex();
+      box-shadow: inset 10px 10px 10px #ffffff44, 10px 10px 10px #eb0a0a44;
+      border-radius: 50%;
+      width: 200px;
+      height: 140px;
+      margin: auto;
+      background-color: $mainColor;
+      &:hover {
+        box-shadow: 10px 10px 10px #eb0a0a44, inset 10px 10px 10px #ffffff44;
+      }
+    }
+    .timer:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 55px;
+      height: 10px;
+      background: $secondColor;
+      margin-bottom: 130px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 20px -10px 1px $secondColor;
+      transform: skew(-50deg);
+    }
+  }
+}

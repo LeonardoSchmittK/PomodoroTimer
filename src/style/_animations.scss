@@ -1,0 +1,8 @@
+@keyframes timer-icon-wiggle {
+  50% {
+    transform: rotate(-40deg);
+  }
+  to {
+    transform: rotate(40deg);
+  }
+}

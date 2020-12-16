@@ -1,0 +1,7 @@
+.footer {
+  writing-mode: vertical-rl;
+  position: relative;
+  bottom: 185px;
+  left: 655px;
+  @include textType(2);
+}

@@ -1,0 +1,58 @@
+@import "./variables";
+
+@mixin mainLayout() {
+  background: radial-gradient($thirdColor 75%, $mainColor);
+  padding: 40px;
+  border-bottom-left-radius: 30%;
+  border-top-right-radius: 30%;
+  box-shadow: 10px 10px 10px #1312121f;
+  border: 10px solid $secondColorFont;
+}
+
+@mixin textType($val) {
+  @if $val==0 {
+    font-family: $mainFont;
+    color: $mainColorFont;
+    font-size: 3.9rem;
+    letter-spacing: -10px;
+    position: relative;
+    text-shadow: 1px 1px 10px #b6b6b6;
+  }
+  @if $val==1 {
+    font-family: $secondFont;
+    color: $mainColorFont;
+    font-size: 2rem;
+  }
+  @if $val==2 {
+    font-family: $secondFont;
+    color: $thirdColorFont;
+    font-size: 1rem;
+    opacity: 0.5;
+    line-height: 25px;
+    letter-spacing: 2px;
+  }
+}
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn() {
+  padding: 10px;
+  background: $gradientBtns;
+  color: $mainColorFont;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  font-size: 0.8em;
+  transition: $mainAnimationTime;
+  border: 2px solid $secondColor;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    transform: scale(1.05);
+    transition: $mainAnimationTime;
+    text-shadow: 0 0 1px;
+  }
+}

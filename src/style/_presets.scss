@@ -1,0 +1,30 @@
+@import "./variables";
+
+body {
+  background-color: $mainColor;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background-color: $mainColor;
+}
+
+::-webkit-scrollbar {
+  width: 40px;
+  background-color: red;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 40px;
+  background-color: red;
+}
+
+::-webkit-scrollbar-track {
+  width: 40px;
+  background-color: red;
+}

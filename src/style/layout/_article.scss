@@ -1,0 +1,13 @@
+.article {
+  width: 450px;
+  text-align: justify;
+  margin: 50px auto;
+
+  h2 {
+    margin-bottom: 20px;
+    @include textType(1);
+  }
+  p {
+    @include textType(2);
+  }
+}
