@@ -56,3 +56,9 @@
     text-shadow: 0 0 1px;
   }
 }
+
+@mixin beforePreset() {
+  content: "";
+  display: block;
+  position: absolute;
+}

@@ -3,43 +3,6 @@
 @import "./mixins";
 @import "./animations";
 @import "./media-queries";
-@import './layout/panel';
-@import './layout/footer';
-@import './layout/article';
-
-
-@media only screen and (min-width: 650px) {
-  .panel {
-    margin: 100px auto;
-    height: 500px;
-    .header {
-      .main-title {
-        font-size: 7em;
-      }
-      .btn {
-        letter-spacing: 2px;
-        font-size: 1.1rem;
-      }
-    }
-    .timer-panel {
-      .timer {
-        font-size: 6em;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .panel {
-    .header {
-      .main-title {
-        font-size: 7em;
-      }
-    }
-    .timer-panel {
-      .timer {
-        font-size: 6em;
-      }
-    }
-  }
-}
+@import "./layout/panel";
+@import "./layout/footer";
+@import "./layout/article";

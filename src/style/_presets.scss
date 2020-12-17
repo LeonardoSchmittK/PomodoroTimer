@@ -4,6 +4,16 @@ body {
   background-color: $mainColor;
 }
 
+a{
+  text-decoration: none;
+  color:$mainColorFont;
+
+}
+
+a:visited{
+  color:$mainColorFont;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

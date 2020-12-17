@@ -18,6 +18,8 @@
   .timer-panel {
     margin-top: 10px;
     .timer {
+      position: relative;
+      display: block;
       @include textType(0);
       @include flex();
       box-shadow: inset 10px 10px 10px #ffffff44, 10px 10px 10px #eb0a0a44;
@@ -29,19 +31,53 @@
       &:hover {
         box-shadow: 10px 10px 10px #eb0a0a44, inset 10px 10px 10px #ffffff44;
       }
+      &:before {
+        @include beforePreset();
+        width: 55px;
+        height: 10px;
+        background: $secondColor;
+        margin-bottom: 130px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 20px -10px 1px $secondColor;
+        transform: skew(-50deg);
+      }
     }
-    .timer:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 55px;
-      height: 10px;
-      background: $secondColor;
-      margin-bottom: 130px;
-      border-top-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      box-shadow: 20px -10px 1px $secondColor;
-      transform: skew(-50deg);
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .panel {
+    margin: 100px auto;
+    height: 500px;
+    .header {
+      .main-title {
+        font-size: 7em;
+      }
+      .btn {
+        letter-spacing: 2px;
+        font-size: 1.1rem;
+      }
+    }
+    .timer-panel {
+      .timer {
+        font-size: 6em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .panel {
+    .header {
+      .main-title {
+        font-size: 7em;
+      }
+    }
+    .timer-panel {
+      .timer {
+        font-size: 6em;
+      }
     }
   }
 }

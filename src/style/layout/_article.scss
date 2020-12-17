@@ -1,13 +1,58 @@
+.quests{
+ display: flex;
+ margin-top:100px;
+}
+
 .article {
-  width: 450px;
+  max-width: 450px;
   text-align: justify;
   margin: 50px auto;
-
-  h2 {
+  border: 10px solid $mainColor;
+  box-shadow: 10px 10px 10px #1312121f;
+  border-radius: 30px;
+  padding: 50px ;
+  .title-quest {
     margin-bottom: 20px;
     @include textType(1);
+    &:before {
+      @include beforePreset();
+      position: relative;
+      width: 5%;
+      height: 5px;
+      top: 45px;
+      right: 25px;
+      background: $mainColorFont;
+      transition: $mainAnimationTime;
+      opacity: 0.2;
+    }
+
+    &:hover:before {
+      width: 10%;
+      transition: $mainAnimationTime;
+    }
   }
-  p {
+  .paragraph-quest {
     @include textType(2);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+ .quests{
+   flex-direction: column;
+ }
+  .article {
+    max-width: 350px;
+    .title-quest:before{
+      top:85px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .article {
+    max-width: 350px;
+    .title-quest:before{
+      top:85px;
+    }
   }
 }
