@@ -1,23 +1,27 @@
 .footer {
   writing-mode: vertical-lr;
   position: relative;
-  bottom: 275px;
-  left: 655px;
+  bottom: 215px;
+  left: 625px;
+  height: 330px;
   @include textType(2);
+  font-size: 0.8em;
+
   a {
     transition: $mainAnimationTime;
   }
   a:hover {
-    transform: scale(1.2);
-    font-size: 1.2em;
+    font-size:25px;
     transition: $mainAnimationTime;
+    
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 800px) {
   .footer {
-    left: 390px;
-    bottom: 170px;
-    font-size: 0.8em;
+    left: 660px;
+    bottom: 276px;
+    height: 385px;
+    @include textType(2);
   }
 }

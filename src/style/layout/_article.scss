@@ -1,16 +1,25 @@
-.quests{
- display: flex;
- margin-top:100px;
+.quests {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
 }
 
 .article {
   max-width: 450px;
   text-align: justify;
   margin: 50px auto;
-  border: 10px solid $mainColor;
-  box-shadow: 10px 10px 10px #1312121f;
+  box-shadow: -3px 3px $thirdColor, 10px 10px 10px #1312121f;
+
   border-radius: 30px;
-  padding: 50px ;
+  padding: 50px;
+  &:hover {
+    box-shadow: 10px 10px 10px #1312121f, -3px 3px $thirdColor;
+    transition: $mainAnimationTime;
+  }
+  &:hover .title-quest:before {
+    width: 10%;
+  }
+
   .title-quest {
     margin-bottom: 20px;
     @include textType(1);
@@ -25,34 +34,49 @@
       transition: $mainAnimationTime;
       opacity: 0.2;
     }
-
-    &:hover:before {
-      width: 10%;
-      transition: $mainAnimationTime;
-    }
   }
   .paragraph-quest {
     @include textType(2);
   }
-}
-
-@media only screen and (max-width: 500px) {
- .quests{
-   flex-direction: column;
- }
-  .article {
-    max-width: 350px;
-    .title-quest:before{
-      top:85px;
+  .quest-icon {
+    color: $mainColorFont;
+    margin-top: 20px;
+    font-size: 2em;
+    &:hover {
+      animation: timer-icon-wiggle 0.2s ease-in-out;
     }
   }
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (min-width: 600px) {
+  .quests {
+    flex-direction: column;
+  }
+  .article {
+    max-width: 390px;
+    .title-quest:before {
+      top: 85px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .quests {
+    flex-direction: row;
+  }
   .article {
     max-width: 350px;
-    .title-quest:before{
-      top:85px;
+    .title-quest:before {
+      top: 85px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .article {
+    max-width: 500px;
+    .title-quest:before {
+      top: 50px;
     }
   }
 }
