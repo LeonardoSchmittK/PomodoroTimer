@@ -345,7 +345,7 @@ a:visited {
 
 @media only screen and (min-width: 1500px) {
   .article {
-    max-width: 500px;
+    max-width: 600px;
   }
   .article .title-quest:before {
     top: 50px;
