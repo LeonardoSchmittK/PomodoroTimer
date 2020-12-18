@@ -7,6 +7,7 @@
   .header {
     .main-title {
       @include textType(0);
+      letter-spacing: px;
       .timer-icon {
         animation: timer-icon-wiggle 10s linear alternate infinite;
       }
@@ -22,18 +23,17 @@
       display: block;
       @include textType(0);
       @include flex();
-      box-shadow: inset 10px 10px 10px #ffffff44, 10px 10px 10px #eb0a0a44;
+      box-shadow: inset 10px 10px 10px #ffffff44, 10px 10px 10px #c02929ad;
       border-radius: 50%;
       width: 200px;
       height: 140px;
       margin: auto;
       background-color: $mainColor;
-      &:hover {
-        box-shadow: 10px 10px 10px #eb0a0a44, inset 10px 10px 10px #ffffff44;
-      }
+      transition: 1.1s;
+
       &:before {
         @include beforePreset();
-        width: 55px;
+        width: 75px;
         height: 10px;
         background: $secondColor;
         margin-bottom: 130px;
@@ -41,6 +41,17 @@
         border-bottom-right-radius: 10px;
         box-shadow: 20px -10px 1px $secondColor;
         transform: skew(-50deg);
+        clip-path: polygon(20% -100%, 150% 5%, 55% 100%, -40% 10%);
+      }
+      &:after {
+        @include beforePreset();
+        width: 40px;
+        height: 40px;
+        background-color: $mainColorFont;
+        opacity: 0.1;
+        top: 15px;
+        left: 40px;
+        border-radius: 50%;
       }
     }
   }
@@ -72,6 +83,7 @@
     .header {
       .main-title {
         font-size: 7em;
+        letter-spacing: -5px;
       }
     }
     .timer-panel {

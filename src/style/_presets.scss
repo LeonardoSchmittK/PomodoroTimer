@@ -4,14 +4,13 @@ body {
   background-color: $mainColor;
 }
 
-a{
+a {
   text-decoration: none;
-  color:$mainColorFont;
-
+  color: $mainColorFont;
 }
 
-a:visited{
-  color:$mainColorFont;
+a:visited {
+  color: $mainColorFont;
 }
 
 * {
@@ -24,17 +23,3 @@ a:visited{
   background-color: $secondColor;
 }
 
-::-webkit-scrollbar {
-  width: 40px;
-  background-color: red;
-}
-
-::-webkit-scrollbar-thumb {
-  width: 40px;
-  background-color: red;
-}
-
-::-webkit-scrollbar-track {
-  width: 40px;
-  background-color: red;
-}

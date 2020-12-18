@@ -6,3 +6,9 @@
     transform: rotate(40deg);
   }
 }
+
+@keyframes timer-decrease{
+  from{
+    width: 220px;
+  }
+}
