@@ -1,8 +1,7 @@
 .footer {
-  writing-mode: vertical-lr;
   position: relative;
-  bottom: 215px;
-  left: 625px;
+  bottom: -65px;
+  left: 80px;
   height: 330px;
   @include textType(2);
   font-size: 0.8em;
@@ -11,14 +10,44 @@
     transition: $mainAnimationTime;
   }
   a:hover {
-    font-size:25px;
+    font-size: 25px;
     transition: $mainAnimationTime;
-    
   }
 }
 
-@media only screen and (min-width: 800px) {
+// @media only screen and (min-width: 400px) {
+//   .footer {
+//     bottom: 250px;
+//     left: 362px;
+//   }
+// }
+
+// @media only screen and (min-width: 450px) {
+//   .footer {
+//     bottom: 250px;
+//     left: 330px;
+//   }
+// }
+
+// @media only screen and (min-width: 500px) {
+//   .footer {
+//     bottom: 250px;
+//     left: 550px;
+//   }
+// }
+
+@media only screen and (min-width: 650px) {
   .footer {
+    writing-mode: vertical-lr;
+
+    bottom: 215px;
+    left: 655px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .footer {
+
     left: 660px;
     bottom: 276px;
     height: 385px;

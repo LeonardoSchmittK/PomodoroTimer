@@ -19,11 +19,11 @@ a:visited {
 }
 
 ::-moz-selection {
-  background-color: #ee5353;
+  background-color: #008000;
 }
 
 ::selection {
-  background-color: #ee5353;
+  background-color: #008000;
 }
 
 ::-webkit-scrollbar {
@@ -191,12 +191,9 @@ a:visited {
 }
 
 .footer {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
   position: relative;
-  bottom: 215px;
-  left: 625px;
+  bottom: -65px;
+  left: 80px;
   height: 330px;
   font-family: Montserrat, sans-serif;
   color: #fdf4f4;
@@ -218,7 +215,17 @@ a:visited {
   transition: 0.2s linear;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 650px) {
+  .footer {
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    bottom: 215px;
+    left: 655px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
   .footer {
     left: 660px;
     bottom: 276px;
