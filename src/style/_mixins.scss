@@ -1,21 +1,21 @@
 @import "./variables";
 
-@mixin mainLayout() {
+@mixin main-layout() {
   background: radial-gradient($thirdColor 75%, $mainColor);
   padding: 40px;
   border-bottom-left-radius: 30%;
   border-top-right-radius: 30%;
-  box-shadow: 10px 10px 10px #1312121f;
+  box-shadow: 10px 10px 10px $shadowColor;
   border: 10px solid $secondColorFont;
 }
 
-@mixin textType($val) {
+@mixin text-type($val) {
   @if $val==0 {
+    position: relative;
     font-family: $mainFont;
     color: $mainColorFont;
     font-size: 3.9rem;
     letter-spacing: -10px;
-    position: relative;
     text-shadow: 1px 1px 10px #b6b6b6;
   }
   @if $val==1 {
@@ -50,6 +50,7 @@
   border: 2px solid $secondColor;
   cursor: pointer;
   outline: none;
+
   &:hover {
     transform: scale(1.05);
     transition: $mainAnimationTime;
@@ -57,7 +58,7 @@
   }
 }
 
-@mixin beforePreset() {
+@mixin before-after-preset() {
   content: "";
   display: block;
   position: absolute;

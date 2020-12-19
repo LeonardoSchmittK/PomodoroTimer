@@ -1,56 +1,34 @@
 .footer {
-  position: relative;
+  width: 280px;
+  height: 330px;
   bottom: -65px;
   left: 80px;
-  height: 330px;
-  @include textType(2);
-  font-size: 0.8em;
+  position: relative;
+  @include text-type(2);
 
   a {
     transition: $mainAnimationTime;
   }
+
   a:hover {
-    font-size: 25px;
+    font-size: 1.5em;
     transition: $mainAnimationTime;
   }
 }
 
-// @media only screen and (min-width: 400px) {
-//   .footer {
-//     bottom: 250px;
-//     left: 362px;
-//   }
-// }
-
-// @media only screen and (min-width: 450px) {
-//   .footer {
-//     bottom: 250px;
-//     left: 330px;
-//   }
-// }
-
-// @media only screen and (min-width: 500px) {
-//   .footer {
-//     bottom: 250px;
-//     left: 550px;
-//   }
-// }
-
 @media only screen and (min-width: 650px) {
   .footer {
-    writing-mode: vertical-lr;
-
     bottom: 215px;
     left: 655px;
+    writing-mode: vertical-lr;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .footer {
-
+    height: 385px;
     left: 660px;
     bottom: 276px;
-    height: 385px;
-    @include textType(2);
+    @include text-type(2);
   }
 }

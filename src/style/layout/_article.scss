@@ -6,28 +6,30 @@
 
 .article {
   max-width: 450px;
-  text-align: justify;
   margin: 50px auto;
-  box-shadow: -3px 3px $thirdColor, 10px 10px 10px #1312121f;
-
+  text-align: justify;
+  box-shadow: -3px 3px $thirdColor, 10px 10px 10px $shadowColor;
   border-radius: 30px;
   padding: 50px;
+
   &:hover {
-    box-shadow: 10px 10px 10px #1312121f, -3px 3px $thirdColor;
+    box-shadow: 10px 10px 10px $shadowColor, -3px 3px $thirdColor;
     transition: $mainAnimationTime;
   }
+
   &:hover .title-quest:before {
     width: 10%;
   }
 
   .title-quest {
     margin-bottom: 20px;
-    @include textType(1);
+    @include text-type(1);
+
     &:before {
-      @include beforePreset();
-      position: relative;
+      @include before-after-preset();
       width: 5%;
       height: 5px;
+      position: relative;
       top: 45px;
       right: 25px;
       background: $mainColorFont;
@@ -35,13 +37,16 @@
       opacity: 0.2;
     }
   }
+
   .paragraph-quest {
-    @include textType(2);
+    @include text-type(2);
   }
+
   .quest-icon {
-    color: $mainColorFont;
     margin-top: 20px;
     font-size: 2em;
+    color: $mainColorFont;
+
     &:hover {
       animation: timer-icon-wiggle 0.2s ease-in-out;
     }
@@ -52,8 +57,10 @@
   .quests {
     flex-direction: column;
   }
+
   .article {
     max-width: 390px;
+
     .title-quest:before {
       top: 85px;
     }
@@ -64,8 +71,10 @@
   .quests {
     flex-direction: row;
   }
+
   .article {
     max-width: 350px;
+
     .title-quest:before {
       top: 85px;
     }
@@ -75,6 +84,7 @@
 @media only screen and (min-width: 1500px) {
   .article {
     max-width: 600px;
+
     .title-quest:before {
       top: 50px;
     }
